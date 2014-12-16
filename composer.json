@@ -1,0 +1,10 @@
+{
+	"name": "ryantbrown/laravel-contracts",
+	"description": "An interactive cheatsheet for Laravel's contracts",
+	"keywords": ["laravel", "contracts", "guide", "cheatsheet", "cheat", "sheet"],
+	"license": "MIT",
+	"type": "project",
+	"require": {
+		"illuminate/contracts": "dev-master"
+	}
+}
