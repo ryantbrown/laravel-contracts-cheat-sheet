@@ -24,7 +24,7 @@
                 .addClass('on')
 
                 // load the static html interface file
-                .load('../classes/'+$(this).data('class') + '.html', function(){
+                .load('./classes/'+$(this).data('class') + '.html', function(){
 
                     // bind close events
                     $('.overlay')
