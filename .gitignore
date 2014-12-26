@@ -1,5 +1,5 @@
 /vendor
 .DS_STORE
-/.idea
+.idea
 /node_modules
 /public/classes/*.html
