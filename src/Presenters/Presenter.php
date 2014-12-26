@@ -1,15 +1,16 @@
 <?php namespace LC\Presenters;
 
+use LC\Helper;
+use Twig_Environment;
+use Twig_Loader_Filesystem;
+
 abstract class Presenter {
 
     protected $twig;
-    protected $templates;
 
     public function __construct()
     {
-        $this->templates = __DIR__ . '/../../assets/templates';
-
-        $this->twig = new \Twig_Environment(new \Twig_Loader_Filesystem($this->templates));
+        $this->twig = new Twig_Environment(new Twig_Loader_Filesystem(Helper::getConfig('templates')));
     }
 
     public function getHtml($template)

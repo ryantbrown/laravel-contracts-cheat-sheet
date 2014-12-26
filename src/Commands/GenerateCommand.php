@@ -10,13 +10,14 @@ use Symfony\Component\Console\Output\OutputInterface;
 class GenerateCommand extends Command {
 
     protected $name = 'generate';
+
     protected $description = 'Generate static html files for each contract';
 
     protected function configure()
     {
         $this->setName($this->name)->setDescription($this->description);
 
-        $this->addOption('path', null, InputOption::VALUE_OPTIONAL, 'Output directory', Helper::getStaticClassesPath());
+        $this->addOption('path', null, InputOption::VALUE_OPTIONAL, 'Output directory', Helper::getConfig('classes'));
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
