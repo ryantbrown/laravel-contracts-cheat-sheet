@@ -41502,11 +41502,6 @@ body {
   margin: 0 2%;
   padding: 2em;
 }
-@media only screen and (max-width: 480px) {
-  .container {
-    padding: 1em;
-  }
-}
 .highlight {
   background-color: yellow;
 }
@@ -41574,10 +41569,15 @@ body {
 .ui.stackable.grid > .row > .column {
   margin-bottom: 10px;
 }
+.ui.stackable.grid > .row > .column.group.hide {
+  display: none !important;
+}
 @media only screen and (max-width: 480px) {
   .ui.stackable.grid > .row > .column.group {
-    padding: 1em .5em !important;
     margin-bottom: 0;
+  }
+  .ui.stackable.grid > .row > .column.group.hide {
+    display: none !important;
   }
 }
 .row {
@@ -41662,4 +41662,9 @@ body {
 }
 .ui.methods.segment {
   margin-bottom: 20px;
+}
+.ui.dividing.site.header {
+  font-size: 2em;
+  margin-top: 0 !important;
+  border-bottom: 0;
 }

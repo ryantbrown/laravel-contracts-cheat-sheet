@@ -12,7 +12,7 @@
             event.preventDefault();
 
             // store the offset so we can revert back
-            original_top = $(this).closest('.inside').find('h1').offset().top;
+            original_top = Math.abs(($(this).closest('.inside').find('h1').offset().top) - 30);
 
             // enable overlay
             $('.overlay')
@@ -101,12 +101,12 @@
                 });
 
                 // set visiblity based on show parameter
-                show ? $(this).parent().show() : $(this).parent().hide();
+                show ? $(this).parent().removeClass('hide') : $(this).parent().addClass('hide');
 
             });
 
             // highlight query matches
-            $('.groups').removeHighlight().highlight(q);
+            $('.search').removeHighlight().highlight(q);
 
         });
 

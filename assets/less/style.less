@@ -11,9 +11,6 @@ body {
   width: 96%;
   margin: 0 2%;
   padding: 2em;
-  @media @phone {
-    padding: 1em;
-  }
 }
 
 .highlight {
@@ -83,9 +80,15 @@ body {
 .ui.stackable.grid>.row>.column {
   margin-bottom: 10px;
   &.group {
+    &.hide {
+      display: none !important;
+    }
     @media @phone {
-      padding: 1em .5em !important;
+      //padding: 1em .5em !important;
       margin-bottom: 0;
+      &.hide {
+        display: none !important;
+      }
     }
   }
 }
@@ -181,4 +184,10 @@ body {
   margin-bottom: 20px;
 }
 
+
+.ui.dividing.site.header {
+  font-size: 2em;
+  margin-top: 0 !important;
+  border-bottom: 0;
+}
 

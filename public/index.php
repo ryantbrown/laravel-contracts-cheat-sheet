@@ -12,18 +12,21 @@
         <link href="//www.google-analytics.com" rel="dns-prefetch">
         <link href="" rel="shortcut icon">
         <link href="" rel="apple-touch-icon-precomposed">
-        <link rel='stylesheet' href="/css/style.css"/>
+        <link rel='stylesheet' href="css/style.css"/>
     </head>
     <body>
         <div class="container">
             <div class="ui stackable grid">
-                <div class="two column row">
-                    <div class="column">
-                        <div class="ui top search">
-                            <div class="ui icon input">
-                                <input type="text" placeholder="filter by keyword" class="prompt">
-                                <i class="search icon"></i>
-                            </div>
+                <div class="eight wide column">
+                    <div class="ui dividing blue site header">
+                        <div class="content">Laravel 5 Contracts</div>
+                    </div>
+                </div>
+                <div class="eight wide column">
+                    <div class="ui top search">
+                        <div class="ui icon input">
+                            <input type="text" placeholder="filter by keyword" class="prompt">
+                            <i class="search icon"></i>
                         </div>
                     </div>
                 </div>
@@ -31,6 +34,6 @@
             <?=(new LC\Presenters\GroupPresenter())->getHtml('group.twig')?>
             <div class="overlay"></div>
         </div>
-        <script src="/js/script.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
