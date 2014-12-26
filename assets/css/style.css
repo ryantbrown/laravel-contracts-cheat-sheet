@@ -41508,7 +41508,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
   background-color: #f6f6f6;
   transform: translateX(100%);
   padding: 30px;
@@ -41667,4 +41666,7 @@ body {
   padding-top: 1px;
   font-weight: 400;
   letter-spacing: 0px;
+}
+.ui.methods.segment {
+  margin-bottom: 20px;
 }

@@ -19,28 +19,26 @@
 {% endif %}
 
 {% if methods|length > 0 %}
-<div class="ui segment">
-    <div class="ui top attached label">Methods</div>
-        <div class="ui relaxed divided four items">
-        {% for method in methods %}
-        {% set total = method.param_info.total %}
-            <div class="item">
-                <div class="content">
-                    <div class="header">{{ method.name }}</div>
-                    <div class="description">{{ method.doc.desc }}</div>
-                    <div class="extra">
-                        {% if total > 0 %}
-                            {% for param in method.doc.params %}
-                                <div class="ui blue label">{{ param|trim(', ')|trim(',') }}</div>
-                            {% endfor %}
-                        {% endif %}
-                        <div class="ui red label">{{ method.doc.return }}</div>
+    <div class="ui methods segment">
+        <div class="ui top attached label">Methods</div>
+            <div class="ui relaxed divided four items">
+                {% for method in methods %}{% set total = method.param_info.total %}
+                    <div class="item">
+                        <div class="content">
+                            <div class="header">{{ method.name }}</div>
+                            <div class="description">{{ method.doc.desc }}</div>
+                            <div class="extra">
+                                {% if total > 0 %}
+                                    {% for param in method.doc.params %}
+                                        <div class="ui blue label">{{ param|trim(', ')|trim(',') }}</div>
+                                    {% endfor %}
+                                {% endif %}
+                                <div class="ui red label">{{ method.doc.return }}</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                {% endfor %}
             </div>
-        {% endfor %}
         </div>
     </div>
-</div>
 {% endif %}
-<br>
