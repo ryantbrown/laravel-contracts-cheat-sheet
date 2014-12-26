@@ -6,5 +6,8 @@
 	"type": "project",
 	"require": {
 		"illuminate/contracts": "dev-master"
+	},
+	"autoload": {
+	  "psr-4": {"LC\\": "src/"}
 	}
 }
