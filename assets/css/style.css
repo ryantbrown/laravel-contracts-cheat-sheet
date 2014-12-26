@@ -17514,8 +17514,8 @@ a.ui.inverted.yellow.header:hover {
 *******************************/
 @font-face {
   font-family: 'Icons';
-  src: url("/fonts/icons.eot");
-  src: url("/fonts/icons.eot?#iefix") format('embedded-opentype'), url("/fonts/icons.svg#icons") format('svg'), url("/fonts/icons.woff") format('woff'), url("/fonts/icons.ttf") format('truetype');
+  src: url("../fonts/icons.eot");
+  src: url("../fonts/icons.eot?#iefix") format('embedded-opentype'), url("../fonts/icons.svg#icons") format('svg'), url("../fonts/icons.woff") format('woff'), url("../fonts/icons.ttf") format('truetype');
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -19575,8 +19575,8 @@ i.icon.weixin:before {
  */
 @font-face {
   font-family: Icons;
-  src: url("/fonts/icons.eot");
-  src: url("/fonts/icons.eot?#iefix") format('embedded-opentype'), url("/fonts/icons.svg#icons") format('svg'), url("/fonts/icons.woff") format('woff'), url("/fonts/icons.ttf") format('truetype');
+  src: url("../fonts/icons.eot");
+  src: url("../fonts/icons.eot?#iefix") format('embedded-opentype'), url("../fonts/icons.svg#icons") format('svg'), url("../fonts/icons.woff") format('woff'), url("../fonts/icons.ttf") format('truetype');
   font-style: normal;
   font-weight: 400;
   font-variant: normal;
