@@ -7,6 +7,7 @@ var prefix = require('gulp-autoprefixer');
 
 var scripts = [
     './assets/vendor/jquery/jquery.js',
+    './assets/vendor/jquery/swipe.js',
     './assets/vendor/semantic/semantic.js',
     './assets/js/script.js'
 ];

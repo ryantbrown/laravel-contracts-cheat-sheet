@@ -1,36 +1,51 @@
-<h1>{{ namespace }}</h1>
+<div class="ui dividing header">
+    <div class="content">{{ namespace }}</div>
+    <i class="close icon"></i>
+</div>
 
 {% if constants|length > 0 %}
-<h3>Constants</h3>
-    {% for key, value in constants %}
-    <div class="constant">{{ key }} - {{ value }}</div>
-    {% endfor %}
-{% endif %}
-
-{% if methods|length > 0 %}
-    <h3>Methods</h3>
-    {% for method in methods %}
-    <div class="method">
-        <div class="name">public function {{ method.name }}()</div>
-        <div class="doc">{{ method.doc }}</div>
-        {% set total = method.param_info.total %}
-        {% if total > 0 %}
-        <div class="param-total">
-            {{ total }} param
-            {% if total > 1 %}s{% endif %}
-            {% for param in method.param_info.params %}
-            <div class="params">
-                <div class="param">
-                    $ {{ param.name }}
-                    {% if param.is_array %} (array) {% endif %}
-                    {% if param.is_callable %} (callable) {% endif %}
-                    {% if param.is_optional %} (optional) {% endif %}
+    <div class="ui segment">
+        <div class="ui top attached label">Constants</div>
+        <div class="constants">
+            {% for key, value in constants %}
+                <div class="constant">
+                    <div class="ui teal image label">
+                        {{ key }}
+                        <span class="detail">{{ value }}</span>
+                    </div>
                 </div>
-            </div>
             {% endfor %}
         </div>
-        {% endif %}
     </div>
-    {% endfor %}
 {% endif %}
+
+
+{% if methods|length > 0 %}
+<div class="ui segment">
+    <div class="ui top attached label">Methods</div>
+        <div class="ui relaxed divided four items">
+        {% for method in methods %}
+        {% set total = method.param_info.total %}
+        <div class="item">
+            <div class="content">
+                <div class="header">{{ method.name }}</div>
+                <div class="description">{{ method.doc.desc }}</div>
+                <div class="extra">
+                    {% if total > 0 %}
+                        {% for param in method.doc.params %}
+                            <div class="ui blue label">{{ param|trim(', ')|trim(',') }}</div>
+                        {% endfor %}
+                    {% endif %}
+                    <div class="ui red label">{{ method.doc.return }}</div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<br>
+
 

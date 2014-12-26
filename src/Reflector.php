@@ -28,7 +28,16 @@ class Reflector {
 
     public function getMethodDoc($method)
     {
-        return str_replace(['/**', '*', '/'], '', $method->getDocComment());
+        $return_part = explode('@return', str_replace(['/**', '*', '/'], '', $method->getDocComment()));
+
+        $return = count($return_part) == 1 ? 'void' : trim(end($return_part));
+
+        $param_parts = explode('@param', $return_part[0]);
+        $desc = $param_parts[0];
+        $params = array_slice($param_parts, 1);
+
+        return compact('desc', 'params', 'return');
+
     }
 
     public function getMethodData()

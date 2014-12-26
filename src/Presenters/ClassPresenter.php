@@ -20,7 +20,7 @@ class ClassPresenter extends Presenter {
         $reflector = Helper::getReflector($this->group, $this->class);
 
         return [
-            'namespace' => Helper::getClassNamespace($this->group, $this->class),
+            'namespace' => $this->group . '\\' . Helper::getClassName($this->class),
             'constants' =>  $reflector->getConstants(),
             'methods' => $reflector->getMethodData()
         ];

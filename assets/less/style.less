@@ -1,5 +1,8 @@
 @import "../vendor/semantic/semantic";
 
+@tablet:    ~"only screen and (min-width: 481px) and (max-width: 768px)";
+@phone:    ~"only screen and (max-width: 480px)";
+
 body {
   background-color: #f5f5f5;
 }
@@ -12,36 +15,49 @@ body {
 
 .overlay {
   width: 100%;
-  height: auto;
+  min-height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  color: #fff;
-  background-color: #555;
+  bottom: 0;
+  background-color: #f6f6f6;
   transform: translateX(100%);
   padding: 30px;
-  transition: transform .2s ease-out;
+  transition: transform .05s ease-out;
   z-index: 5;
+  padding-bottom: 30px;
   &.on {
+    transition: transform .2s ease-out;
     transform: translateX(0%);
   }
 
+  .ui.dividing.header {
 
-  h1 {}
-  h3 {}
-
-  .constant {}
-  .method {
-
-    .name {}
-    .doc {}
-    .param-total {}
-    .params {
-
-      .param {}
-
+    i.close {
+      float: right;
+      color: #8a8a8a;
+      font-size: 1.2em;
+      transition: color .2s ease-out;
+      margin-top: -2px;
+      &:hover {
+        cursor: pointer;
+        color: #444;
+      }
     }
 
+    @media @phone {
+      font-size: 1em;
+    }
+    .button {
+      margin-top: -10px;
+    }
+  }
+
+  .constant {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
 
@@ -49,11 +65,27 @@ body {
 
 .top.search {
   margin-bottom: 1.25em;
+  @media @phone {
+    margin-bottom: 0;
+  }
   .ui.input {
     width: 100%;
+    @media @phone {
+      margin-bottom: 20px;
+    }
     input.prompt {
       padding: 12px 18px;
       font-size: 1em;
+    }
+  }
+}
+
+.ui.stackable.grid>.row>.column {
+  margin-bottom: 10px;
+  &.group {
+    @media @phone {
+      padding: 1em .5em !important;
+      margin-bottom: 0;
     }
   }
 }

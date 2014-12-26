@@ -41504,29 +41504,75 @@ body {
 }
 .overlay {
   width: 100%;
-  height: auto;
+  min-height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  color: #fff;
-  background-color: #555;
+  bottom: 0;
+  background-color: #f6f6f6;
   transform: translateX(100%);
   padding: 30px;
-  transition: transform 0.2s ease-out;
+  transition: transform 0.05s ease-out;
   z-index: 5;
+  padding-bottom: 30px;
 }
 .overlay.on {
+  transition: transform 0.2s ease-out;
   transform: translateX(0%);
+}
+.overlay .ui.dividing.header i.close {
+  float: right;
+  color: #8a8a8a;
+  font-size: 1.2em;
+  transition: color 0.2s ease-out;
+  margin-top: -2px;
+}
+.overlay .ui.dividing.header i.close:hover {
+  cursor: pointer;
+  color: #444;
+}
+@media only screen and (max-width: 480px) {
+  .overlay .ui.dividing.header {
+    font-size: 1em;
+  }
+}
+.overlay .ui.dividing.header .button {
+  margin-top: -10px;
+}
+.overlay .constant {
+  margin-bottom: 10px;
+}
+.overlay .constant:last-child {
+  margin-bottom: 0;
 }
 .top.search {
   margin-bottom: 1.25em;
 }
+@media only screen and (max-width: 480px) {
+  .top.search {
+    margin-bottom: 0;
+  }
+}
 .top.search .ui.input {
   width: 100%;
+}
+@media only screen and (max-width: 480px) {
+  .top.search .ui.input {
+    margin-bottom: 20px;
+  }
 }
 .top.search .ui.input input.prompt {
   padding: 12px 18px;
   font-size: 1em;
+}
+.ui.stackable.grid > .row > .column {
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 480px) {
+  .ui.stackable.grid > .row > .column.group {
+    padding: 1em .5em !important;
+    margin-bottom: 0;
+  }
 }
 .row {
   margin-bottom: 1em;
