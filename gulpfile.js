@@ -13,24 +13,19 @@ var scripts = [
     './assets/js/script.js'
 ];
 
-gulp.task('less', function () {
+gulp.task('css', function () {
     gulp.src('./assets/less/style.less')
         .pipe(less())
-        .pipe(gulp.dest('./assets/css'));
-});
-
-gulp.task('css', ['less'], function() {
-    gulp.src('./assets/css/style.css')
         .pipe(prefix())
         .pipe(minify())
-        .pipe(gulp.dest('./public/css'));
+        .pipe(gulp.dest('./dist/css'));
 });
 
 gulp.task('script', function() {
     gulp.src(scripts)
         .pipe(concat('script.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./public/js'));
+        .pipe(gulp.dest('./dist/js'));
 });
 
 gulp.task('default', function(){

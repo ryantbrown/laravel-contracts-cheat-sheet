@@ -1,0 +1,470 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Making the Internet">
+
+    <title>Laravel 5 Contract Reference - Cheat Sheet</title>
+
+    <link href="//www.google-analytics.com" rel="dns-prefetch">
+    <link href="" rel="shortcut icon">
+    <link href="" rel="apple-touch-icon-precomposed">
+    <link rel='stylesheet' href="css/style.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="ui stackable grid">
+        <div class="eight wide column">
+            <div class="ui dividing blue site header">
+                <div class="content">Laravel 5 Contracts</div>
+            </div>
+        </div>
+        <div class="eight wide column">
+            <div class="ui top search">
+                <div class="ui icon input">
+                    <input type="text" placeholder="filter by keyword" class="prompt">
+                    <i class="search icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui stackable grid groups">
+    <div class="four column row">
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="auth">
+                    <span class="title search">Auth</span>
+                    <span class="count">5 interfaces</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="auth-authenticatable">Authenticatable</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="auth-canresetpassword">CanResetPassword</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="auth-guard">Guard</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="auth-passwordbroker">PasswordBroker</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="auth-registrar">Registrar</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="bus">
+                    <span class="title search">Bus</span>
+                    <span class="count">3 interfaces</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="bus-dispatcher">Dispatcher</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="bus-handlerresolver">HandlerResolver</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="bus-queueingdispatcher">QueueingDispatcher</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="cache">
+                    <span class="title search">Cache</span>
+                    <span class="count">2 interfaces</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="cache-factory">Factory</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="cache-repository">Repository</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="config">
+                    <span class="title search">Config</span>
+                    <span class="count">1 interface</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="config-repository">Repository</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="console">
+                    <span class="title search">Console</span>
+                    <span class="count">2 interfaces</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="console-application">Application</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="console-kernel">Kernel</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="container">
+                    <span class="title search">Container</span>
+                    <span class="count">2 interfaces</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="container-container">Container</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="container-contextualbindingbuilder">ContextualBindingBuilder</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="cookie">
+                    <span class="title search">Cookie</span>
+                    <span class="count">2 interfaces</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="cookie-factory">Factory</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="cookie-queueingfactory">QueueingFactory</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="debug">
+                    <span class="title search">Debug</span>
+                    <span class="count">1 interface</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="debug-exceptionhandler">ExceptionHandler</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="encryption">
+                    <span class="title search">Encryption</span>
+                    <span class="count">2 interfaces</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="encryption-decryptexception">DecryptException</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="encryption-encrypter">Encrypter</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="events">
+                    <span class="title search">Events</span>
+                    <span class="count">1 interface</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="events-dispatcher">Dispatcher</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="filesystem">
+                    <span class="title search">Filesystem</span>
+                    <span class="count">4 interfaces</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="filesystem-cloud">Cloud</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="filesystem-factory">Factory</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="filesystem-filenotfoundexception">FileNotFoundException</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="filesystem-filesystem">Filesystem</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="foundation">
+                    <span class="title search">Foundation</span>
+                    <span class="count">1 interface</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="foundation-application">Application</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="hashing">
+                    <span class="title search">Hashing</span>
+                    <span class="count">1 interface</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="hashing-hasher">Hasher</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="http">
+                    <span class="title search">Http</span>
+                    <span class="count">1 interface</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="http-kernel">Kernel</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="logging">
+                    <span class="title search">Logging</span>
+                    <span class="count">1 interface</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="logging-log">Log</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="mail">
+                    <span class="title search">Mail</span>
+                    <span class="count">2 interfaces</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="mail-mailer">Mailer</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="mail-mailqueue">MailQueue</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="pagination">
+                    <span class="title search">Pagination</span>
+                    <span class="count">3 interfaces</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="pagination-lengthawarepaginator">LengthAwarePaginator</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="pagination-paginator">Paginator</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="pagination-presenter">Presenter</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="pipeline">
+                    <span class="title search">Pipeline</span>
+                    <span class="count">2 interfaces</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="pipeline-hub">Hub</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="pipeline-pipeline">Pipeline</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="queue">
+                    <span class="title search">Queue</span>
+                    <span class="count">8 interfaces</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="queue-entitynotfoundexception">EntityNotFoundException</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="queue-entityresolver">EntityResolver</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="queue-factory">Factory</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="queue-job">Job</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="queue-monitor">Monitor</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="queue-queue">Queue</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="queue-queueableentity">QueueableEntity</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="queue-shouldbequeued">ShouldBeQueued</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="redis">
+                    <span class="title search">Redis</span>
+                    <span class="count">1 interface</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="redis-database">Database</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="routing">
+                    <span class="title search">Routing</span>
+                    <span class="count">6 interfaces</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="routing-middleware">Middleware</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="routing-registrar">Registrar</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="routing-responsefactory">ResponseFactory</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="routing-terminablemiddleware">TerminableMiddleware</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="routing-urlgenerator">UrlGenerator</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="routing-urlroutable">UrlRoutable</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="support">
+                    <span class="title search">Support</span>
+                    <span class="count">5 interfaces</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="support-arrayable">Arrayable</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="support-jsonable">Jsonable</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="support-messagebag">MessageBag</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="support-messageprovider">MessageProvider</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="support-renderable">Renderable</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="validation">
+                    <span class="title search">Validation</span>
+                    <span class="count">5 interfaces</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="validation-factory">Factory</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="validation-unauthorizedexception">UnauthorizedException</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="validation-validateswhenresolved">ValidatesWhenResolved</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="validation-validationexception">ValidationException</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="validation-validator">Validator</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+                <div class="column group expand">
+            <div class="inside">
+                <h1 class="view">
+                    <span class="title search">View</span>
+                    <span class="count">2 interfaces</span>
+                </h1>
+                <div class="files">
+                                                            <div class="file search">
+                        <a href="#" data-class="view-factory">Factory</a>
+                    </div>
+                                                            <div class="file search">
+                        <a href="#" data-class="view-view">View</a>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+            </div>
+</div>
+    <div class="overlay"></div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
