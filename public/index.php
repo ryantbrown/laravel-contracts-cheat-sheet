@@ -21,7 +21,7 @@
 <div class="container">
 
     <div class="ui stackable grid">
-        <div class="two column row">
+        <div class="four column row">
             <div class="column">
                 <div class="ui top search">
                     <div class="ui icon input">
@@ -32,11 +32,15 @@
                 </div>
             </div>
             <div class="column">
-                <div class="ui large buttons">
-                    <div class="ui button toggle-ints">
-                        <i class="tasks icon"></i> Show Interfaces
-                    </div>
+                <div class="ui toggle checkbox interfaces">
+                    <input type="checkbox" name="interfaces" checked>
+                    <label>Interfaces</label>
                 </div>
+<!--                <div class="ui large buttons">-->
+<!--                    <div class="ui button toggle-ints">-->
+<!--                        <i class="tasks icon"></i> Show Interfaces-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </div>
     </div>
@@ -46,31 +50,8 @@
 
     <div class="ui stackable grid">
         <div class="four column row">
-        <?php $contracts = \LC\Helper::getContracts(); $counter = 0; ?>
-        <?php foreach ($contracts as $group => $files): ?>
-        <?php if ($counter == 4): $counter = 0; ?>
+            <?php echo (new \LC\Presenters\GroupPresenter())->getHtml('group.twig'); ?>
         </div>
-        <div class="four column row"> <?php endif; ?>
-            <a class="column group" href="#">
-                <div class="inside">
-                    <h1>
-                        <span class="title"><?=$group?></span>
-                        <span class="count"><?=count($files)?> interfaces</span>
-                    </h1>
-                    <div class="files">
-                        <?php foreach ($files as $file): ?>
-                            <div class="file"><?=\LC\Helper::getClassName($file)?></div>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-            </a>
-            <?php $counter++; endforeach; ?>
-        </div>
-    </div>
-
-
-    <div class="overlay">
-        Overlay
     </div>
 
 

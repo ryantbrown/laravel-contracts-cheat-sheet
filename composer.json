@@ -5,7 +5,9 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"illuminate/contracts": "dev-master"
+		"illuminate/contracts": "dev-master",
+	  	"symfony/console": "3.0.*@dev",
+		"twig/twig": "~1.0"
 	},
 	"autoload": {
 	  "psr-4": {"LC\\": "src/"}

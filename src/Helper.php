@@ -4,6 +4,17 @@ class Helper {
 
     const CONTRACTS_PATH = '../vendor/illuminate/contracts';
     const CONTRACTS_NAMESPACE = 'Illuminate\Contracts\\';
+    const STATIC_CLASSES_PATH = '../public/classes/';
+
+    private static function getContractsPath()
+    {
+        return __DIR__.'/'.self::CONTRACTS_PATH;
+    }
+
+    public static function getStaticClassesPath()
+    {
+        return __DIR__.'/'.self::STATIC_CLASSES_PATH;
+    }
 
     public static function getReflector($group, $file)
     {
@@ -14,7 +25,7 @@ class Helper {
     {
         $contracts = [];
 
-        $iterator = new Iterator(Helper::CONTRACTS_PATH);
+        $iterator = new Iterator(self::getContractsPath());
 
         foreach($iterator->getFolderIterators($iterator->getFolders()) as $folder => $folder_iterator)
         {
@@ -22,6 +33,11 @@ class Helper {
         }
 
         return $contracts;
+    }
+
+    public static function getClassDataAttribute($group, $file)
+    {
+        return strtolower($group.'-'.$file);
     }
 
     public static function getGroupNamespace($group)
