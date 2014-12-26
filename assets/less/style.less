@@ -11,6 +11,13 @@ body {
   width: 96%;
   margin: 0 2%;
   padding: 2em;
+  @media @phone {
+    padding: 1em;
+  }
+}
+
+.highlight {
+  background-color: yellow;
 }
 
 .overlay {
@@ -24,14 +31,11 @@ body {
   padding: 30px;
   transition: transform .05s ease-out;
   z-index: 5;
-  padding-bottom: 30px;
   &.on {
     transition: transform .2s ease-out;
     transform: translateX(0%);
   }
-
   .ui.dividing.header {
-
     i.close {
       float: right;
       color: #8a8a8a;
@@ -43,7 +47,6 @@ body {
         color: #444;
       }
     }
-
     @media @phone {
       font-size: 1em;
     }
@@ -58,8 +61,6 @@ body {
       margin-bottom: 0;
     }
   }
-
-
 }
 
 .top.search {
@@ -91,7 +92,6 @@ body {
 
 .row {
   margin-bottom: 1em;
-
   .column {
     padding: 5px;
     &.dim {
@@ -128,24 +128,13 @@ body {
           }
           .count {
             float: right;
-            span {
-              font-size: 12px;
-              color: #bbb;
-              font-weight: 300;
-              letter-spacing: 0px;
-            }
-            i.close {
-              font-size: 1.2em;
-              cursor: pointer;
-              display: none;
-              &:hover {
-                color: #009fda;
-              }
-            }
+            font-size: 12px;
+            color: #bbb;
+            font-weight: 300;
+            letter-spacing: 0px;
           }
         }
         .files {
-          display: none;
           margin-top: 10px;
           height: 180px;
           .file {
@@ -169,13 +158,6 @@ body {
           }
         }
       }
-      &.expand {
-        .inside {
-          .files {
-            display: block;
-          }
-        }
-      }
     }
   }
 }
@@ -194,7 +176,6 @@ body {
     letter-spacing: 0px;
   }
 }
-
 
 .ui.methods.segment {
   margin-bottom: 20px;

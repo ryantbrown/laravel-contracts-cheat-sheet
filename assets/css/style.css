@@ -41502,6 +41502,14 @@ body {
   margin: 0 2%;
   padding: 2em;
 }
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: 1em;
+  }
+}
+.highlight {
+  background-color: yellow;
+}
 .overlay {
   width: 100%;
   min-height: 100%;
@@ -41513,7 +41521,6 @@ body {
   padding: 30px;
   transition: transform 0.05s ease-out;
   z-index: 5;
-  padding-bottom: 30px;
 }
 .overlay.on {
   transition: transform 0.2s ease-out;
@@ -41614,23 +41621,12 @@ body {
 }
 .row .column.group .inside h1 .count {
   float: right;
-}
-.row .column.group .inside h1 .count span {
   font-size: 12px;
   color: #bbb;
   font-weight: 300;
   letter-spacing: 0px;
 }
-.row .column.group .inside h1 .count i.close {
-  font-size: 1.2em;
-  cursor: pointer;
-  display: none;
-}
-.row .column.group .inside h1 .count i.close:hover {
-  color: #009fda;
-}
 .row .column.group .inside .files {
-  display: none;
   margin-top: 10px;
   height: 180px;
 }
@@ -41652,9 +41648,6 @@ body {
 }
 .row .column.group .inside:hover h1 i.close {
   color: #8a8a8a;
-}
-.row .column.group.expand .inside .files {
-  display: block;
 }
 .ui.interfaces {
   margin-top: 10px;

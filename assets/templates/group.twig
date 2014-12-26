@@ -3,24 +3,15 @@
         {% for group, files in contracts %}
         <div class="column group expand">
             <div class="inside">
-                <h1>
-                    <a href="#" class="data-link" data-type="group" data-name="{{ group }}">
-                        <span class="title">{{ group }}</span>
-                    </a>
-                    <span class="count">
-                        <i class="close icon"></i>
-                        <span>{{ files|length }} interface{% if files|length > 1 %}s{% endif %}</span>
-                    </span>
+                <h1 class="{{ group|lower }}">
+                    <span class="title search">{{ group }}</span>
+                    <span class="count">{{ files|length }} interface{% if files|length > 1 %}s{% endif %}</span>
                 </h1>
                 <div class="files">
-                    <?php foreach ($files as $class): $name = \LC\Helper::getClassName($class); ?>
                     {% for class in files %}
                     {% set name = class|trim('.php') %}
-                    <div class="file">
-                        <a href="#" class="data-link" data-type="class"
-                           data-name="{{ group|lower }}-{{ name|lower }}">
-                            {{ name }}
-                        </a>
+                    <div class="file search">
+                        <a href="#" data-class="{{ group|lower }}-{{ name|lower }}">{{ name }}</a>
                     </div>
                     {% endfor %}
                 </div>

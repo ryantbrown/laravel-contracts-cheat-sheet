@@ -9,6 +9,7 @@ var scripts = [
     './assets/vendor/jquery/jquery.js',
     './assets/vendor/jquery/swipe.js',
     './assets/vendor/semantic/semantic.js',
+    './assets/vendor/highlight/highlight.js',
     './assets/js/script.js'
 ];
 

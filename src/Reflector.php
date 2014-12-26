@@ -30,6 +30,8 @@ class Reflector {
     {
         $return_part = explode('@return', str_replace(['/**', '*', '/'], '', $method->getDocComment()));
 
+        // @throw
+
         $return = count($return_part) == 1 ? 'void' : trim(end($return_part));
 
         $param_parts = explode('@param', $return_part[0]);
