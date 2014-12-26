@@ -12,7 +12,7 @@
         <link href="//www.google-analytics.com" rel="dns-prefetch">
         <link href="" rel="shortcut icon">
         <link href="" rel="apple-touch-icon-precomposed">
-        <link rel='stylesheet' href="css/style.css"/>
+        <link rel='stylesheet' href="public/css/style.css"/>
     </head>
     <body>
         <div class="container">
@@ -34,6 +34,6 @@
             <?=(new LC\Presenters\GroupPresenter())->getHtml('group.twig')?>
             <div class="overlay"></div>
         </div>
-        <script src="js/script.js"></script>
+        <script src="public/js/script.js"></script>
     </body>
 </html>
