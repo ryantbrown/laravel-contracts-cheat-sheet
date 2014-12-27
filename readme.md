@@ -32,13 +32,13 @@ Customize Example Template
 * Edit the ```twig```, ```less``` and ```js``` files in the ```assets``` directory
 * You may need to modify the ```gulpfile.js``` and run ```gulp``` to rebuild the assets
 * Re-generate the static html files with ```php commands/generate.php generate```
-* Start the server ```cd dist && php -S localhost:8000```
+* Start the server ```cd dist && php -S localhost:8000```v
 
 
 Build your own custom Cheat Sheet
 ------
 
-There is a Helper class that makes it super easy to create your own layout anyway you see fit. Below is a quick and dirty script to generate the basic data used in the cheat sheet.  Take a look at the ```src``` directory for all the classes and methods available.
+There is a Helper class ```LC\Helper``` that makes it super easy to create your own layout anyway you see fit. Below is a quick and dirty script to generate the basic data used in the cheat sheet.  Take a look at the ```src``` directory for all the classes and methods available.
 
 ```php
 <?php
