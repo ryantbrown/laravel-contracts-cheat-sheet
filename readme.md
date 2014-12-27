@@ -32,7 +32,7 @@ Customize Example Template
 * Edit the ```twig```, ```less``` and ```js``` files in the ```assets``` directory
 * You may need to modify the ```gulpfile.js``` and run ```gulp``` to rebuild the assets
 * Re-generate the static html files with ```php commands/generate.php generate```
-* Start the server ```cd dist && php -S localhost:8000```v
+* Start the server ```cd dist && php -S localhost:8000```
 
 
 Build your own custom Cheat Sheet
