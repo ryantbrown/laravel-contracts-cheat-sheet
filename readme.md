@@ -7,7 +7,7 @@ Build your own custom cheat sheet for the Laravel 5 Contracts. The generator uti
 Demo
 ------
 
-You can view a sample of the cheet sheet here [http://ryantbrown.io/laravel-contracts-cheat-sheet](http://ryantbrown.io/laravel-contracts)
+You can view a sample of the cheet sheet here [http://ryantbrown.io/laravel-contracts-cheat-sheet](http://ryantbrown.io/laravel-contracts-cheat-sheet)
 
 Download and Run
 ------
