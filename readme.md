@@ -7,7 +7,7 @@ Build your own custom cheat sheet for the Laravel 5 Contracts. The generator uti
 Demo
 ------
 
-You can view a sample of the cheet sheet here [http://ryantbrown.io/laravel-contracts](http://ryantbrown.io/laravel-contracts)
+You can view a sample of the cheet sheet here [http://ryantbrown.io/laravel-contracts-cheat-sheet](http://ryantbrown.io/laravel-contracts)
 
 Download and Run
 ------
@@ -94,6 +94,6 @@ foreach($contracts as $group => $files)
 }
 ```
 
-With the above script you can pretty much generate any UI you want. If you want to generate a static build like the [example](http://ryantbrown.io/laravel-contracts) then take a look at the ```LC\Presenters``` and the ```LC\Commands\GenerateCommand``` classes.  In a nutshell the command uses the presenters as a data source and generates ```html``` files from the twig templates.
+With the above script you can pretty much generate any UI you want. If you want to generate a static build like the [example](http://ryantbrown.io/laravel-contracts-cheat-sheet) then take a look at the ```LC\Presenters``` and the ```LC\Commands\GenerateCommand``` classes.  In a nutshell the command uses the presenters as a data source and generates ```html``` files from the twig templates.
 
 That's it, this was a christmas/weekend project so I hope you find it useful.
