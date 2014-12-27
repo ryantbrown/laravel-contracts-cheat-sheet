@@ -3,3 +3,4 @@
 .idea
 /node_modules
 /dist/classes/*.html
+/dist/index.html
