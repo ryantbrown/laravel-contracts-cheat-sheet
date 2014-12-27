@@ -80,7 +80,7 @@ foreach($contracts as $group => $files)
             foreach($method['param_info']['params'] as $param)
             {
                 // param name
-                echo "Param: " . $param['name'];
+                echo $param['name'];
 
                 // param details
                 $param['position']
