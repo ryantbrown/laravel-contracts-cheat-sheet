@@ -60,7 +60,7 @@ foreach($contracts as $group => $files)
 
         $constants = $reflector->getConstants();
 
-        // key => val array of constants
+        // $key => $val array of constants
         echo "<pre>"; print_r($constants); echo "</pre>";
 
         // array of all methods and their information
