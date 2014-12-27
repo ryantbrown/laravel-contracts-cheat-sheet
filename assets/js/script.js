@@ -17,9 +17,6 @@
             // enable overlay
             $('.overlay')
 
-                // show the overlay
-                .show()
-
                 // set loading icon
                 .html('<i class="spinner loading icon"></i>')
 
@@ -67,7 +64,7 @@
         var closeOverlay = function() {
 
             // animate it out
-            $('.overlay').removeClass('on').hide();
+            $('.overlay').removeClass('on');
 
             // unhide the contract groups
             $('.groups').show();
