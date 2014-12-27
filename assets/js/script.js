@@ -17,6 +17,9 @@
             // enable overlay
             $('.overlay')
 
+                // show the overlay
+                .show()
+
                 // set loading icon
                 .html('<i class="spinner loading icon"></i>')
 
@@ -25,9 +28,6 @@
 
                 // load the static html interface file
                 .load('./classes/'+$(this).data('class') + '.html', function(){
-
-                    // undo overflow
-                    $('.container').css('overflow-x', 'auto');
 
                     // bind close events
                     $('.overlay')
@@ -67,10 +67,7 @@
         var closeOverlay = function() {
 
             // animate it out
-            $('.overlay').removeClass('on');
-
-            // reset overflow
-            $('.container').css('overflow-x', 'hidden');
+            $('.overlay').removeClass('on').hide();
 
             // unhide the contract groups
             $('.groups').show();
