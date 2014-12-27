@@ -2,7 +2,7 @@
 Laravel Contracts - Cheat Sheet
 ========
 
-Customize and then generate your own static cheat sheet for the Laravel 5 Contracts. The generator utilizes the Reflection API and composer to stay current with the [contracts repository](https://github.com/illuminate/contracts).
+Build your own custom cheat sheet for the Laravel 5 Contracts. The generator utilizes the Reflection API and composer to stay current with the [contracts repository](https://github.com/illuminate/contracts).
 
 Demo
 ------
@@ -94,4 +94,4 @@ foreach($contracts as $group => $files)
 }
 ```
 
-With the above script you can pretty much generate any UI you want.
+With the above script you can pretty much generate any UI you want. If you want to generate a static build like the [example](http://ryantbrown.io/laravel-contracts) then take a look at the ```LC\Presenters``` and the ```LC\Commands\GenerateCommand``` classes.  In a nutshell the command uses the presenters as a data source and generates ```html``` files from the twig templates.
