@@ -29,7 +29,7 @@ Customize Example Template
 ------
 
 * Install the node modules with ```sudo npm install```
-* Edit the ```templates```, ```less``` files and ```js``` files in the ```assets``` directory
+* Edit the ```twig```, ```less``` and ```js``` files in the ```assets``` directory
 * You may need to modify the ```gulpfile.js``` and run ```gulp``` to rebuild the assets
 * Re-generate the static html files with ```php commands/generate.php generate```
 * Start the server ```cd dist && php -S localhost:8000```
