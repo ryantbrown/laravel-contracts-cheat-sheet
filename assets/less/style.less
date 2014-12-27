@@ -25,15 +25,15 @@ body {
   top: 0;
   left: 0;
   background-color: #f6f6f6;
-  transform: translateX(-100px);
+  transform: translate(-100%, -100%);
   padding: 30px;
   transition: transform .05s ease-out;
   z-index: 5;
-  opacity: 0;
+  //opacity: 0;
   &.on {
     transition: transform, opacity .2s ease-out;
-    transform: translateX(0%);
-    opacity: 1;
+    transform: translate(0%, 0%);
+    //opacity: 1;
   }
   .ui.dividing.header {
     i.close {
