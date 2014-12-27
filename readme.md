@@ -12,18 +12,18 @@ You can view a sample of the cheet sheet here [http://ryantbrown.io/laravel-cont
 Download and Run
 ------
 
-* Clone the repo and install the dependencies
+Clone the repo and install the dependencies
 * ```git clone https://github.com/ryantbrown/laravel-contracts-cheat-sheet.git laravel-contracts```
 * ```cd laravel-contracts```
 * ```composer install```
-* Generate the static documents (inside the dist folder)
+Generate the static documents (inside the dist folder)
 * ```php commands/generate.php generate```
-* Navigate to the dist folder and start a server
+Navigate to the dist folder and start a server
 * ```cd dist```
 * ```php -S localhost:8000```
-* If you want to view it without a webserver you'll need to start chrome like so:
+If you want to view it without a webserver you'll need to start chrome like so:
 * ```open -a Google\ Chrome --args -–disable-web-security```
-* Then you can open the ```dist/index.html``` file
+Then you can open the ```dist/index.html``` file
 
 Customize Example Template
 ------
