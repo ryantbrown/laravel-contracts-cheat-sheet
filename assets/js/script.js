@@ -26,6 +26,9 @@
                 // load the static html interface file
                 .load('./classes/'+$(this).data('class') + '.html', function(){
 
+                    // undo overflow
+                    $('.container').css('overflow-x', 'auto');
+
                     // bind close events
                     $('.overlay')
 
@@ -65,6 +68,9 @@
 
             // animate it out
             $('.overlay').removeClass('on');
+
+            // reset overflow
+            $('.container').css('overflow-x', 'hidden');
 
             // unhide the contract groups
             $('.groups').show();
