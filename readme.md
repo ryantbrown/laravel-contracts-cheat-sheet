@@ -73,7 +73,7 @@ foreach($contracts as $group => $files)
 
             // method doc comment
             echo $method['doc'];
-            
+
             // number of params
             echo $method['param_info']['total'];
 
@@ -83,11 +83,11 @@ foreach($contracts as $group => $files)
                 echo "Param: " . $param['name'];
 
                 // param details
-                //$param['position']
-                //$param['allows_null']
-                //$param['is_array']
-                //$param['is_callable']
-                //$param['is_optional']
+                $param['position']
+                $param['allows_null']
+                $param['is_array']
+                $param['is_callable']
+                $param['is_optional']
             }
         }
     }
