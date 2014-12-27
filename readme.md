@@ -70,10 +70,12 @@ foreach($contracts as $group => $files)
         {
             // method name
             echo $method['name'];
+
             // method doc comment
             echo $method['doc'];
+            
             // number of params
-            echo "<br>No. of params: " . $method['param_info']['total']
+            echo $method['param_info']['total'];
 
             foreach($method['param_info']['params'] as $param)
             {
