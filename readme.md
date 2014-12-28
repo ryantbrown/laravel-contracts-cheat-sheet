@@ -25,15 +25,6 @@ Navigate to the ```dist``` folder and start a server
 If you want to view it without a webserver you'll need to start chrome like so:
 * ```open -a Google\ Chrome --args -–disable-web-security``` and then browse to ```dist/index.html```
 
-Customize Example Template
-------
-
-* Install the node modules with ```sudo npm install```
-* Edit the ```twig```, ```less``` and ```js``` files in the ```assets``` directory
-* You may need to modify the ```gulpfile.js``` and run ```gulp``` to rebuild the assets
-* Re-generate the static html files with ```php commands/generate.php generate```
-* Start the server ```cd dist && php -S localhost:8000```
-
 
 Build your own custom Cheat Sheet
 ------
@@ -95,5 +86,23 @@ foreach($contracts as $group => $files)
 ```
 
 With the above script you can pretty much generate any UI you want. If you want to generate a static build like the [example](http://ryantbrown.io/laravel-contracts-cheat-sheet) then take a look at the ```LC\Presenters``` and the ```LC\Commands\GenerateCommand``` classes.  In a nutshell the command uses the presenters as a data source and generates ```html``` files from the twig templates.
+
+Customize Existing Example Template
+------
+
+* Install the node modules with ```sudo npm install```
+* Edit the ```twig```, ```less``` and ```js``` files in the ```assets``` directory
+* You may need to modify the ```gulpfile.js``` and run ```gulp``` to rebuild the assets
+* Re-generate the static html files with ```php commands/generate.php generate```
+* Start the server ```cd dist && php -S localhost:8000```
+
+Stay up to date with the Contracts Respository
+------
+
+As the contracts change you can keep your cheat sheet up to date by updating the composer dependency.
+
+* Update the contracts with ```composer update```
+* Re-generate the static classes ```php commands/generate.php generate```
+
 
 That's it, this was a christmas/weekend project so I hope you find it useful.
