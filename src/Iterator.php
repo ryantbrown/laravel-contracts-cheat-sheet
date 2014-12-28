@@ -35,7 +35,7 @@ class Iterator {
     {
         foreach($iterator as $class)
             if(!$class->isDot()) $classes[] = $class->getFilename();
-        
+
         return $classes;
     }
 
