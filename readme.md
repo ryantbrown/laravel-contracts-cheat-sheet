@@ -90,6 +90,8 @@ With the above script you can pretty much generate any UI you want. If you want 
 Customize Existing Example Template
 ------
 
+If you want to just tweak the example cheat sheet you can do that as well.
+
 * Install the node modules with ```sudo npm install```
 * Edit the ```twig```, ```less``` and ```js``` files in the ```assets``` directory
 * You may need to modify the ```gulpfile.js``` and run ```gulp``` to rebuild the assets
