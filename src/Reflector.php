@@ -28,17 +28,32 @@ class Reflector {
 
     public function getMethodDoc($method)
     {
-        $return_part = explode('@return', str_replace(['/**', '*', '/'], '', $method->getDocComment()));
+        // strip comment characters
+        $formatted_doc = str_replace(['/**', '*', '/'], '', $method->getDocComment());
 
-        // @throw
-
+        // @return
+        $return_part = explode('@return', $formatted_doc);
         $return = count($return_part) == 1 ? 'void' : trim(end($return_part));
 
+        // @throw
+        if(strpos($return, '@throws') !== false)
+        {
+            $throw_part = explode('@throws', $return);
+            $throw = trim(end($throw_part));
+            // reset return
+            $return = $throw_part[0];
+        }
+        else
+        {
+            $throw = false;
+        }
+
+        // @param
         $param_parts = explode('@param', $return_part[0]);
         $desc = $param_parts[0];
         $params = array_slice($param_parts, 1);
 
-        return compact('desc', 'params', 'return');
+        return compact('desc', 'params', 'return', 'throw');
 
     }
 

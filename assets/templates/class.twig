@@ -3,6 +3,13 @@
     <i class="close icon"></i>
 </div>
 
+<div class="ui segment">
+    <div class="ui top attached label">Legend</div>
+    <div class="ui blue label">Parameter</div>
+    <div class="ui orange label">Exception Type</div>
+    <div class="ui red label">Return Type</div>
+</div>
+
 {% if constants|length > 0 %}
 <div class="ui segment">
     <div class="ui top attached label">Constants</div>
@@ -32,6 +39,9 @@
                         {% for param in method.doc.params %}
                             <div class="ui blue label">{{ param|trim(', ')|trim(',') }}</div>
                         {% endfor %}
+                        {% endif %}
+                        {% if(method.doc.throw) %}
+                        <div class="ui orange label">{{ method.doc.throw }}</div>
                         {% endif %}
                         <div class="ui red label">{{ method.doc.return }}</div>
                     </div>
