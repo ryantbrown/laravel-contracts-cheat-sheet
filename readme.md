@@ -29,7 +29,7 @@ If you want to view it without a webserver you'll need to start chrome like so:
 Build your own custom Cheat Sheet
 ------
 
-There is a Helper class ```LC\Helper``` that makes it super easy to create your own layout anyway you see fit. Below is a quick and dirty script to generate the basic data used in the cheat sheet.  Take a look at the ```src``` directory for all the classes and methods available.
+The ```LC\Helper``` class makes it easy to create your own layout anyway you see fit. Below is a quick and dirty script to generate the basic data used in the cheat sheet.  Take a look at the ```src``` directory for all the classes and methods available.
 
 ```php
 <?php
