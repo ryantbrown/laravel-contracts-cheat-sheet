@@ -11,6 +11,11 @@ class Reflector {
         $this->class = new ReflectionClass($class_path);
     }
 
+    public function getReflectionInstance()
+    {
+        return $this->class;
+    }
+
     public function getConstants()
     {
         return $this->class->getConstants();
