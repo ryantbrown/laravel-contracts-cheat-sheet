@@ -6,7 +6,7 @@ class Helper {
     {
         $config = require __DIR__.'/../config/paths.php';
 
-        return isset($config[$key]) ? $config[$key] : false;
+        return isset($config[$key]) ? $config[$key] : null;
     }
 
     public static function getReflector($group, $file)
