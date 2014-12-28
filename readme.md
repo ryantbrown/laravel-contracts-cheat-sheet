@@ -102,7 +102,7 @@ instance of ```LC\Reflector```, which has several useful methods suited for crea
 If you want access to a ```ReflectionClass``` instance then either of the following will work:
 
 ```php
-// use helper to generate reflection instance
+// use static helper method to generate reflection instance
 $class = (LC\Helper::getReflector($group, $interface))->getReflectionInstance();
 
 // use the Reflector class to generate an instance
