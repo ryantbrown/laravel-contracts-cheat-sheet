@@ -11,7 +11,7 @@
                     {% for class in files %}
                     {% set name = class|trim('.php') %}
                     <div class="file search">
-                        <a href="#" data-class="{{ group|lower }}-{{ name|lower }}">{{ name }}</a>
+                        <a href="#/{{ group|lower }}/{{ name|lower }}" data-class="{{ group|lower }}-{{ name|lower }}">{{ name }}</a>
                     </div>
                     {% endfor %}
                 </div>

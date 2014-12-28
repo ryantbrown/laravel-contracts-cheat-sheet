@@ -11,6 +11,9 @@
             // disable the hash jump
             event.preventDefault();
 
+            // set the location
+            window.location.href = $(this).attr('href');
+
             // store the offset so we can revert back
             original_top = Math.abs(($(this).closest('.inside').find('h1').offset().top) - 30);
 
@@ -60,8 +63,23 @@
 
         });
 
+        // after we set the click handler we need to
+        // check the location to see if we need to
+        // load a specific interface right form the start
+        var segments = location.href.split('#');
+
+        // if we have a "group-class" segment
+        if(segments.length === 2 && segments[1] !== '')
+        {
+            var url_parts = segments[1].split('/');
+            $('a[data-class='+(url_parts[1] + '-' + url_parts[2])+']').click();
+        }
+
         // close the overlay
         var closeOverlay = function() {
+
+            // set the location
+            window.location.href = '#';
 
             // animate it out
             $('.overlay').removeClass('on');
