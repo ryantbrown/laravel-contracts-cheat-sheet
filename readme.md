@@ -109,9 +109,6 @@ $class = (LC\Helper::getReflector($group, $interface))->getReflectionInstance();
 $class = (new LC\Reflector(Helper::getClassNamespace($group, $file)))->getReflectionInstance();
 ```
 
-
-getReflectionInstance
-
 With the above script you can pretty much generate any UI you want. If you want to generate a
 static build like the [example](http://ryantbrown.io/laravel-contracts-cheat-sheet) then take
 a look at the ```LC\Presenters``` and the ```LC\Commands\GenerateCommand``` classes.  In a
