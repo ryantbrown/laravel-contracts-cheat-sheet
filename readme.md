@@ -97,6 +97,12 @@ foreach($contracts as $group => $interfaces)
 }
 ```
 
+With the above script you can pretty much generate any UI you want. If you want to generate a
+static build like the [example](http://ryantbrown.io/laravel-contracts-cheat-sheet) then take
+a look at the ```LC\Presenters``` and the ```LC\Commands\GenerateCommand``` classes.  In a
+nutshell the command uses the presenters as a data source and generates ```html``` files
+from the twig templates.
+
 **Note:** ```LC\Helper::getReflector``` does not return an instance of PHP's ```ReflectionClass``` but rather a
 instance of ```LC\Reflector```, which has several useful methods for creating the cheat sheet.
 If you want access to a ```ReflectionClass``` instance then either of the following will work:
@@ -108,12 +114,6 @@ $class = (LC\Helper::getReflector($group, $interface))->getReflectionInstance();
 // use the Reflector class to generate an instance
 $class = (new LC\Reflector(Helper::getClassNamespace($group, $file)))->getReflectionInstance();
 ```
-
-With the above script you can pretty much generate any UI you want. If you want to generate a
-static build like the [example](http://ryantbrown.io/laravel-contracts-cheat-sheet) then take
-a look at the ```LC\Presenters``` and the ```LC\Commands\GenerateCommand``` classes.  In a
-nutshell the command uses the presenters as a data source and generates ```html``` files
-from the twig templates.
 
 Customize the existing example
 ------
