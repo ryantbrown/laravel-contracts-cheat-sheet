@@ -16,8 +16,6 @@ class Iterator {
 
     public function getFolders()
     {
-        $folders = [];
-
         foreach($this->directories as $dir)
         {
             if($dir->isDir() && $dir->getFilename() != '.git' && !$dir->isDot())
@@ -31,8 +29,6 @@ class Iterator {
 
     public function getFolderIterators(array $folders)
     {
-        $iterators = [];
-
         foreach($folders as $folder)
         {
             $iterators[$folder] = new DirectoryIterator($this->path.'/'.$folder);
@@ -43,8 +39,6 @@ class Iterator {
 
     public function getFolderClasses(DirectoryIterator $iterator)
     {
-        $classes = [];
-
         foreach($iterator as $class)
         {
             if(!$class->isDot())
