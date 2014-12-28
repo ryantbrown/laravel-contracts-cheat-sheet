@@ -48,6 +48,7 @@ $contracts = LC\Helper::getContracts();
 // loop through each contract group
 foreach($contracts as $group => $interfaces)
 {
+    // group name (parent folder for set of interfaces)
     echo $group;
 
     // loop through all the interfaces associated with the contract group
