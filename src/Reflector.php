@@ -36,16 +36,13 @@ class Reflector {
         $return = count($return_part) == 1 ? 'void' : trim(end($return_part));
 
         // @throw
+        $throw = false;
         if(strpos($return, '@throws') !== false)
         {
             $throw_part = explode('@throws', $return);
             $throw = trim(end($throw_part));
             // reset return
             $return = $throw_part[0];
-        }
-        else
-        {
-            $throw = false;
         }
 
         // @param
