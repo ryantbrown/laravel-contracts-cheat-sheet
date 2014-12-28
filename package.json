@@ -1,6 +1,6 @@
 {
-  "name": "ryantbrown",
-  "description": "Ryan T Brown Website",
+  "name": "laravel-contracts-cheat-sheet",
+  "description": "Build your own custom cheat sheet for the Laravel 5 Contracts.",
   "version": "1.0.0",
   "devDependencies": {
     "gulp": "~3.8.0",
@@ -10,8 +10,5 @@
     "gulp-run": "^1.6.4",
     "gulp-ssh": "^0.3.2",
     "gulp-uglify": "~0.3.1"
-  },
-  "dependencies": {
-    "gulp-autoprefixer": "^2.0.0"
   }
 }
