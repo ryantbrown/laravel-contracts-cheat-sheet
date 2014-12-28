@@ -87,7 +87,7 @@ foreach($contracts as $group => $files)
 
 With the above script you can pretty much generate any UI you want. If you want to generate a static build like the [example](http://ryantbrown.io/laravel-contracts-cheat-sheet) then take a look at the ```LC\Presenters``` and the ```LC\Commands\GenerateCommand``` classes.  In a nutshell the command uses the presenters as a data source and generates ```html``` files from the twig templates.
 
-Customize Existing Example Template
+Customize the existing example
 ------
 
 If you want to just tweak the example cheat sheet you can do that as well.
