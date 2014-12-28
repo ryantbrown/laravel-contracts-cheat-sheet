@@ -101,7 +101,7 @@ If you want to just tweak the example cheat sheet you can do that as well.
 Stay up to date with the Contracts Respository
 ------
 
-As the contracts change you can keep your cheat sheet up to date by updating the composer dependency.
+As the [contracts](https://github.com/illuminate/contracts) change you can keep your cheat sheet up to date by updating the composer dependency.
 
 * Update the contracts with ```composer update```
 * Re-generate the static classes ```php commands/generate.php generate```
