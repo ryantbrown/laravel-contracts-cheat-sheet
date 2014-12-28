@@ -31,6 +31,45 @@ class Reflector {
         return $method->getName();
     }
 
+    public function getMethodData()
+    {
+        return array_map([$this, 'getMethodDataEntry'], $this->getMethods());
+    }
+
+    public function getParamsInfo($params)
+    {
+        return array_map([$this, 'getParamInfo'], $params);
+    }
+
+    protected function getMethodDataEntry($method)
+    {
+        return [
+            'name' => $this->getMethodName($method),
+            'doc' => $this->getMethodDoc($method),
+            'param_info' => $this->getMethodParamInfo($method)
+        ];
+    }
+
+    public function getParamInfo($param)
+    {
+        return [
+            'name' => $param->getName(),
+            'position' => $param->getPosition(),
+            'allows_null' => $param->allowsNull(),
+            'is_array' => $param->isArray(),
+            'is_callable' => $param->isCallable(),
+            'is_optional' => $param->isOptional(),
+        ];
+    }
+
+    public function getMethodParamInfo($method)
+    {
+        return [
+            'total' => $method->getNumberOfParameters(),
+            'params' => $this->getParamsInfo($method->getParameters())
+        ];
+    }
+
     public function getMethodDoc($method)
     {
         // strip comment characters
@@ -57,54 +96,6 @@ class Reflector {
 
         return compact('desc', 'params', 'return', 'throw');
 
-    }
-
-    public function getMethodData()
-    {
-        $methods = [];
-
-        foreach($this->getMethods() as $method)
-        {
-            $methods[] = [
-                'name' => $this->getMethodName($method),
-                'doc' => $this->getMethodDoc($method),
-                'param_info' => $this->getMethodParamInfo($method)
-            ];
-        }
-
-        return $methods;
-    }
-
-    public function getParamsInfo($params)
-    {
-        $param_array = [];
-
-        foreach($params as $param)
-        {
-            $param_array[] = $this->getParamInfo($param);
-        }
-
-        return $param_array;
-    }
-
-    public function getParamInfo($param)
-    {
-        return [
-            'name' => $param->getName(),
-            'position' => $param->getPosition(),
-            'allows_null' => $param->allowsNull(),
-            'is_array' => $param->isArray(),
-            'is_callable' => $param->isCallable(),
-            'is_optional' => $param->isOptional(),
-        ];
-    }
-
-    public function getMethodParamInfo($method)
-    {
-        return [
-            'total' => $method->getNumberOfParameters(),
-            'params' => $this->getParamsInfo($method->getParameters())
-        ];
     }
 
 }
