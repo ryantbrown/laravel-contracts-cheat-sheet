@@ -98,7 +98,7 @@ foreach($contracts as $group => $interfaces)
 ```
 
 **Note:** ```LC\Helper::getReflector``` does not return an instance of PHP's ```ReflectionClass``` but rather a
-instance of ```LC\Reflector```, which has several useful methods suited for creating the cheat sheet.
+instance of ```LC\Reflector```, which has several useful methods for creating the cheat sheet.
 If you want access to a ```ReflectionClass``` instance then either of the following will work:
 
 ```php
