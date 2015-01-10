@@ -1,8 +1,8 @@
 <?php namespace LC\Translators;
 
-class DocTranslator {
+class DocTranslator implements Translator {
 
-    public static function getMethodDoc($doc)
+    public static function translate($doc)
     {
         return
             self::getParamPart(

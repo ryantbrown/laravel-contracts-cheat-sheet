@@ -46,7 +46,7 @@ class Reflector {
     {
         return [
             'name' => $this->getMethodName($method),
-            'doc' => DocTranslator::getMethodDoc($method->getDocComment()),
+            'doc' => DocTranslator::translate($method->getDocComment()),
             'param_info' => $this->getMethodParamInfo($method)
         ];
     }
