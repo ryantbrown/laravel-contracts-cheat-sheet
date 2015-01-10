@@ -1,6 +1,7 @@
 <?php namespace LC;
 
 use ReflectionClass;
+use LC\Translators\DocTranslator;
 
 class Reflector {
 
@@ -45,7 +46,7 @@ class Reflector {
     {
         return [
             'name' => $this->getMethodName($method),
-            'doc' => $this->getMethodDoc($method),
+            'doc' => DocTranslator::getMethodDoc($method->getDocComment()),
             'param_info' => $this->getMethodParamInfo($method)
         ];
     }
@@ -68,34 +69,6 @@ class Reflector {
             'total' => $method->getNumberOfParameters(),
             'params' => $this->getParamsInfo($method->getParameters())
         ];
-    }
-
-    public function getMethodDoc($method)
-    {
-        // strip comment characters
-        $formatted_doc = str_replace(['/**', '*', '/'], '', $method->getDocComment());
-
-        // @return
-        $return_part = explode('@return', $formatted_doc);
-        $return = count($return_part) == 1 ? 'void' : trim(end($return_part));
-
-        // @throw
-        $throw = false;
-        if(strpos($return, '@throws') !== false)
-        {
-            $throw_part = explode('@throws', $return);
-            $throw = trim(end($throw_part));
-            // reset return
-            $return = $throw_part[0];
-        }
-
-        // @param
-        $param_parts = explode('@param', $return_part[0]);
-        $desc = $param_parts[0];
-        $params = array_slice($param_parts, 1);
-
-        return compact('desc', 'params', 'return', 'throw');
-
     }
 
 }
